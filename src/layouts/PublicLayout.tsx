@@ -1,12 +1,12 @@
 
 
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
 function PublicLayout() {
   return (
     <div>
-        <h1>Public Layout</h1>
+        <Link to={"/admin"}>Admin</Link>
         <br />
         <Outlet/>
     </div>
