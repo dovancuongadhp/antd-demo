@@ -4,38 +4,31 @@ import { Button, Checkbox, DatePicker, Form, Input, Radio, Select } from "antd";
 const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
-const GeneralInfomation: React.FC = () => {
-  const [componentDisabled, setComponentDisabled] = useState<boolean>(false);
+const GeneralInfomation = ({onSubmit}:any) => {
   const onFinish = (values: any) => {
-    console.log("Success:", values);
+    // console.log("Success:", values);
+    onSubmit(values)
   };
   const onFinishFailed = (errorInfo: any) => {
     console.log("Failed:", errorInfo);
   };
   return (
-    <>
-      <Checkbox
-        checked={componentDisabled}
-        onChange={(e) => setComponentDisabled(e.target.checked)}
-      >
-        Disabled
-      </Checkbox>
+    <div>
       <Form
         labelCol={{ span: 4 }}
         wrapperCol={{ span: 14 }}
         layout="horizontal"
-        disabled={componentDisabled}
-        style={{ maxWidth: 600 }}
+        style={{ width: 600 }}
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
-        <Form.Item label="Họ Và Tên" name={"fullName"}>
+        <Form.Item label="Họ Và Tên" name={"fullName"}  rules={[{ required: true, message: 'Vui Lòng nhập họ và tên !' }]}>
           <Input />
         </Form.Item>
-        <Form.Item label="Email" name={"email"}>
+        <Form.Item label="Email" name={"email"}  rules={[{ required: true, message: 'Vui Lòng nhập email !'}]}>
           <Input />
         </Form.Item>
-        <Form.Item label="Giới tính" name={"sex"}>
+        <Form.Item label="Giới tính" name={"sex"}  rules={[{ required: true, message: 'Vui lòng nhập giới tính !' }]}>
           <Radio.Group>
             <Radio value="male"> Nam </Radio>
             <Radio value="femle"> Nữ </Radio>
@@ -55,11 +48,15 @@ const GeneralInfomation: React.FC = () => {
         <Form.Item label="Ghi chú" name={"note"}>
           <TextArea rows={4} />
         </Form.Item>
+
+        <Form.Item>
+
         <Button type="primary" htmlType="submit">
-          Submit
+          Lưu
         </Button>
+        </Form.Item>
       </Form>
-    </>
+    </div>
   );
 };
 
