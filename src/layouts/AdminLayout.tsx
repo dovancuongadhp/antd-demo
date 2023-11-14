@@ -3,7 +3,7 @@ import { Breadcrumb, Layout } from 'antd';
 import SideBarAdmin from '@/components/Sidebar/SidebarAdmin';
 import { Outlet, useLocation } from 'react-router-dom';
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 const AdminLayout: React.FC = () => {
     const location = useLocation();

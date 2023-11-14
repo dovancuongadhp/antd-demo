@@ -1,10 +1,9 @@
 import GeneralInfomation from '@/components/GeneralInformation'
 import Step from '@/components/Step'
-import { Card, Flex, Row, Space } from 'antd'
-import React, { useEffect, useState } from 'react'
+import { Card, Flex, Space } from 'antd'
+import { useEffect, useState } from 'react'
 import ThankYou from '@/components/CheckInformation'
 function User() {
-  const [dataUser, setDataUser] = useState({});
   const [stepCurrent, setStepCurrent] = useState(0);
   const items=[
     {
@@ -18,13 +17,10 @@ function User() {
 
   },[stepCurrent])
 
-  function handleSubmitStep1(data:any):void{
-    setDataUser(data);
+  function handleSubmitStep1():void{
     setStepCurrent(1)
   }
-  function handleSubmitStep2():void{
-    
-  }
+
   return (
     <Space direction="vertical" size="middle" style={{ display: 'flex', justifyContent: 'center' }}>
       <Card title="Chỉnh sửa thông tin" size="small">

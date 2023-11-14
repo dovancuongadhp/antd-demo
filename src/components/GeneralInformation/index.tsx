@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import { Button, Checkbox, DatePicker, Form, Input, Radio, Select } from "antd";
+import { Button, DatePicker, Form, Input, Radio, Select } from "antd";
 
-const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
 const GeneralInfomation = ({onSubmit}:any) => {

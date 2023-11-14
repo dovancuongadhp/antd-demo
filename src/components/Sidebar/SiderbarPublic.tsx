@@ -1,8 +1,8 @@
 import React from 'react';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 
-const { Header, Content, Footer } = Layout;
+const { Header } = Layout;
 
 const SidebarPublic: React.FC = () => {
     const listNavBar = [
