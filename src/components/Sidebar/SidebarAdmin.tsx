@@ -31,7 +31,6 @@ const items: MenuItem[] = [
 
 const SideBarAdmin: React.FC = () => {
   const location = useLocation();
-  console.log(location);
   const [collapsed, setCollapsed] = useState(false);
   return (
     <Sider
@@ -39,7 +38,6 @@ const SideBarAdmin: React.FC = () => {
       collapsed={collapsed}
       onCollapse={(value) => setCollapsed(value)}
     >
-      <div className="demo-logo-vertical" />
       <Menu
         theme="dark"
         defaultSelectedKeys={[`${location.pathname}`]}

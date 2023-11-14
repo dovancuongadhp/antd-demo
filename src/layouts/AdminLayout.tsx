@@ -7,12 +7,11 @@ const { Header, Content, Footer } = Layout;
 
 const AdminLayout: React.FC = () => {
     const location = useLocation();
-    console.log(location)
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <SideBarAdmin></SideBarAdmin>
       <Layout>
-        <Header style={{ padding: 0, background: "#ff4d4f" }} />
+        <Header style={{ padding: 0 , background: "#fff"}} />
         <Content style={{ margin: '0 16px' }}>
           <Breadcrumb style={{ margin: '16px 0' }}>
             <Breadcrumb.Item>{location.pathname}</Breadcrumb.Item>
@@ -21,7 +20,7 @@ const AdminLayout: React.FC = () => {
             <Outlet />
           </div>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>Do Van Cuong - React</Footer>
+        {/* <Footer style={{ textAlign: 'center' }}>Do Van Cuong - React</Footer> */}
       </Layout>
     </Layout>
   );

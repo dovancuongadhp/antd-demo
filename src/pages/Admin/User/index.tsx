@@ -1,8 +1,11 @@
+import GeneralInfomation from '@/components/GeneralInformation'
 import React from 'react'
 
 function User() {
   return (
-    <div>User</div>
+    <div>
+      <GeneralInfomation />
+    </div>
   )
 }
 
